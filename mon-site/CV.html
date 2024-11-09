@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site de vente de cartes de collection, cartes postales et cartes à jouer">
+    <title>Vente de Cartes - Boutique en ligne</title>
+    <link rel="stylesheet" href="style.css"> <!-- Si vous utilisez un fichier CSS externe -->
+    <style>
+        /* Style de base pour la mise en page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .card h3 {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .card p {
+            color: #555;
+        }
+        .price {
+            font-size: 1.5em;
+            color: #2a9d8f;
+            margin-top: 10px;
+        }
+        .card button {
+            background-color: #2a9d8f;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+        .card button:hover {
+            background-color: #21867a;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #2a9d8f;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .contact-form button:hover {
+            background-color: #21867a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur notre boutique de cartes !</h1>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#cartes">Cartes à vendre</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Section des cartes -->
+        <section id="cartes">
+            <h2>Nos cartes à vendre</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <img src="pikachu.jpg" alt="Carte 1">
+                    <h3>Carte de collection 1</h3>
+                    <p>Carte rare et en excellent état.</p>
+                    <div class="price">25€</div>
+                    <button>Ajouter au panier</button>
+                </div>
+                <div class="card">
+                    <img src="dracaufeu.jpg" alt="Carte 2">
+                    <h3>Carte de collection 2</h3>
+                    <p>Carte postale ancienne.</p>
+                    <div class="price">15€</div>
+                    <button>Ajouter au panier</button>
+                </div>
+                <div class="card">
+                    <img src="image3.jpg" alt="Carte 3">
+                    <h3>Carte à jouer 3</h3>
+                    <p>Carte à jouer en édition limitée.</p>
+                    <div class="price">10€</div>
+                    <button>Ajouter au panier</button>
+                </div>
+                <!-- Ajoutez d'autres cartes ici -->
+            </div>
+        </section>
+
+        <!-- Formulaire de contact -->
+        <section id="contact">
+            <h2>Contactez-nous</h2>
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Vente de Cartes. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
